@@ -1,0 +1,26 @@
+.row {
+   
+}
+.box1 {
+	background-color: silver;
+	height: 250px;
+	width: 200px;
+	border:1px silver ;
+
+}
+.box2 {
+	height: 500px;
+	width: 975px;
+	border:1px solid blue;
+}
+.box3 {
+	height: 500px;
+	width: 500px;
+	border: 1px solid red
+}
+.border1{
+	border-bottom:1px black
+	;
+}
+
+
