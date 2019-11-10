@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daily Challenge - DOM</title>
+        <!-- <script src="DailyChall_DOM.js" charset="UTF-8"></script> -->
+
+    </head>
+    <body>
+        <div id = "root">
+           
+
+
+        </div>
+        
+    <script>
+        let div1 = document.getElementById('root');
+        let header = document.createElement('h2')
+        header.innerText = 'Shopping List';
+        div1.append(header);
+
+       
+        let entry = document.createElement("INPUT");
+        div1.append(entry);
+        entry.setAttribute("value", "text");
+        entry.setAttribute("id", "entry");
+        
+        var button = document.createElement("button")
+        button.innerText = ('ADD');
+        div1.appendChild(button);
+       
+        let list = document.createElement('ol'); 
+        div1.appendChild(list);       
+            
+
+        const add_new_item = () => { 
+            let shopping_list_item = document.createElement('li');
+            let new_item = document.getElementById('entry').value; 
+            let item_added = document.createTextNode(new_item);
+            shopping_list_item.appendChild(item_added);
+            list.appendChild(shopping_list_item);
+        }
+        button.addEventListener("click",add_new_item);
+
+        console.log (list)
+
+        var button1 =document.createElement("button");
+        button1.innerText = ('Clear All');
+        div1.appendChild(button1);
+
+        const remove_all_items = () =>{
+            var total_list = document.getElementsByTagName('li');
+            var len = total_list.length 
+            for ( var i = 0 ; i < len ; i++ ){
+                if (total_list != 0 ){
+                total_list[0].remove();
+
+                }
+            }
+            
+            
+        } 
+        button1.addEventListener("click",remove_all_items);
+
+
+    </script>
+
+    </body>    
+</html>
