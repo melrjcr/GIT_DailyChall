@@ -8,9 +8,9 @@ def encrypt(text, pattern):
     for i in range(len(text)):
         char = text[i]
         if char.isupper():
-            result += chr((ord(char) + pattern - (ord('A'))) % len.alphabet + (ord('A')))
+            result += chr((ord(char) + pattern - (ord('A'))) % len(alphabet) + (ord('A')))
         else:
-            result += chr((ord(char) + pattern - (ord('a'))) % len.alphabet + (ord('a')))
+            result += chr((ord(char) + pattern - (ord('a'))) % len(alphabet) + (ord('a')))
     return result
 
 
