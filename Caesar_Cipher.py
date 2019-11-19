@@ -1,5 +1,6 @@
 text = input('insert text to encrypt: ')
 pattern = int(input('choose a shift pattern: '))
+alphabet = abcdefghijklmnopqrstuvwxyz
 
 
 def encrypt(text, pattern):
@@ -7,9 +8,9 @@ def encrypt(text, pattern):
     for i in range(len(text)):
         char = text[i]
         if char.isupper():
-            result += chr((ord(char) + pattern - (ord('A'))) % 26 + (ord('A')))
+            result += chr((ord(char) + pattern - (ord('A'))) % len.alphabet + (ord('A')))
         else:
-            result += chr((ord(char) + pattern - (ord('a'))) % 26 + (ord('a')))
+            result += chr((ord(char) + pattern - (ord('a'))) % len.alphabet + (ord('a')))
     return result
 
 
