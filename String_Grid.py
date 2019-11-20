@@ -25,4 +25,4 @@ for i in range(0, len(list_f), 3):
     else:
         print(' '.join(list_f[i:]))
         
-print(list_f)
+
